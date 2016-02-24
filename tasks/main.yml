@@ -1,0 +1,4 @@
+---
+
+- include: kibana.yml
+  tags: [kibana]

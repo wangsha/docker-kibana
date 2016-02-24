@@ -1,0 +1,20 @@
+---
+# defaults file for docker-kibana
+docker_kibana_name: kibana
+docker_kibana_image: kibana
+elasticsearch_url: http://some-elasticsearch:9200
+docker_kibana_env:
+  ELASTICSEARCH_URL: "{{ elasticsearch_url }}"
+docker_kibana_command: ""
+docker_kibana_net: default
+docker_kibana_expose:
+  - 5601
+docker_kibana_ports:
+  - 5601:5601
+docker_kibana_volumes: []
+docker_kibana_links: []
+docker_kibana_log_driver: syslog
+docker_kibana_log_opt:
+  syslog-facility: local0
+  syslog-tag: kibana
+docker_api_version: 1.21
