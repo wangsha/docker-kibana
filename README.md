@@ -45,7 +45,7 @@ that can be overridden.
 
 If you need a playbook to set Docker itself, have a look at [angstwad.docker_ubuntu](https://github.com/angstwad/docker.ubuntu) Galaxy role.
 
-Default docker image used is [kibana/kibana](https://hub.docker.com/r/kibana/kibana/). Default port is 5601.
+Default docker image used is [kibana](https://hub.docker.com/_/kibana/). Default port is 5601.
 
 
 License
