@@ -9,6 +9,7 @@
     name: "{{ docker_kibana_name }}"
     ports: "{{ docker_kibana_ports }}"
     links: "{{ docker_kibana_links }}"
+    volumes: "{{ docker_kibana_volumes }}"
     command: "{{ docker_kibana_command }}"
     log_driver: "{{ docker_kibana_log_driver }}"
     log_opt: "{{ docker_kibana_log_opt }}"
