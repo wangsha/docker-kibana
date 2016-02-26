@@ -13,7 +13,7 @@ docker_kibana_ports:
   - 5601:5601
 docker_kibana_volumes: []
 docker_kibana_links: []
-docker_kibana_memory_limit: 512m
+docker_kibana_memory_limit: 512MB
 docker_kibana_log_driver: syslog
 docker_kibana_log_opt:
   syslog-facility: local0
