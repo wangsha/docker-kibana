@@ -11,6 +11,7 @@
     links: "{{ docker_kibana_links }}"
     volumes: "{{ docker_kibana_volumes }}"
     command: "{{ docker_kibana_command }}"
+    memory_limit: "{{ docker_kibana_memory_limit }}"
     log_driver: "{{ docker_kibana_log_driver }}"
     log_opt: "{{ docker_kibana_log_opt }}"
     pull: always
