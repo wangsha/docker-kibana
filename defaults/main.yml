@@ -1,7 +1,7 @@
 ---
 # defaults file for docker-kibana
 docker_kibana_name: kibana
-docker_kibana_image: kibana
+docker_kibana_image: kibana:latest
 elasticsearch_url: http://some-elasticsearch:9200
 docker_kibana_env:
   ELASTICSEARCH_URL: "{{ elasticsearch_url }}"
