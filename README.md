@@ -47,6 +47,21 @@ If you need a playbook to set Docker itself, have a look at [angstwad.docker_ubu
 
 Default docker image used is [kibana](https://hub.docker.com/_/kibana/). Default port is 5601.
 
+Known Issue
+-----------
+As of date March 2016, the docker image will restart itself when runtime memory exhaust container's assigned memory, resulting in a constantly changing pid.
+To walk around this [issue](https://github.com/elastic/kibana/issues/5170), set environment variable `NODE_OPTIONS="--max-old-space-size=200"`
+to a smaller number than container's memory limit.
+```yaml
+---
+- role: wangsha.docker-kibana
+      docker_kibana_image: kibana:4.4.2
+      elasticsearch_url: http://localhost:9200
+      docker_kibana_env:
+        NODE_OPTIONS: "--max-old-space-size=300"
+        ELASTICSEARCH_URL: "{{ elasticsearch_url }}"
+      docker_kibana_memory_limit: 512MB
+```
 
 Custom volume mappings
 ----------------------
