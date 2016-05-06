@@ -29,7 +29,19 @@
   tags:
     - install
     - upgrade
-    
+
+
+- name: Remove existing {{ docker_kibana_name }} container
+  docker:
+    docker_api_version: "{{ docker_api_version }}"
+    image: "{{ docker_kibana_image }}"
+    name: "{{ docker_kibana_name }}"
+    state: absent
+  tags:
+    - install
+    - upgrade
+
+
 - name: Run docker kibana container
   become: true
   docker:
